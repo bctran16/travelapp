@@ -1,167 +1,253 @@
 @import url(https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap);
 
 $playfair-display: 'Playfair Display', serif;
+$montserrat: 'Montserrat', sans-serif;
 
 body {
-    background-color: lightblue;
-    font-size: x-large;
+    background-color: #415B97;
+    font-size: x-small;
+    font-family: $montserrat;
 }
 
 .wrapper {
     display: grid;
-    margin: 5% 10%; 
-    grid-template-rows: 100px 50px 50px 50px;
-grid-template-columns: 1fr 1fr;
+    margin: 5% 5%; 
+    grid-template-rows: 50px 50px 50px 50px 200px 200px;
+    grid-template-columns: 1fr;
     grid-template-areas: 
-    "a  e" 
-    "b e" 
-    "c e" 
-    "d e";
+    "a" 
+    "b" 
+    "c" 
+    "d"
+    "e"
+    "f";
+    max-width: 100%;
     
 }
 
 div {
-    background-color: lightpink;
-    border: red solid 2px;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: stretch;
     flex-direction: row;
     .headline {
+        background-color: #A1712E;
         grid-area: a;
         align-items: center;
     }
     .city{
+        background-color: rgb(206, 169, 60);
         grid-area: b;
         align-items: center;
         label {
             margin: 0 10px;
         }
-        }
+    }
     .date{
+        background-color: rgb(206, 169, 60);
         grid-area: c;
         align-items: center;
         justify-content: space-evenly;
     }
     .submit {
+        background-color: rgb(206, 169, 60);
         grid-area: d;
         align-items: center;
     }
     .result {
+        background-color: rgb(206, 169, 60);
+        border-top:  #415B97 solid 5px;
         grid-area: e; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
         #entryHolder {
             display: flex;
-            flex-direction: row;
+            flex-direction: column; 
+            div {
+                margin: 10px 10%;
+            }
         }
+    }
+    .img{
+        background-color: #A1712E;
+        grid-area: f;
+        justify-content: center;
+        img{
+            position: relative;
+            object-fit: fill;
+            height: 100%;
+            width: auto;
+            margin: 0px 10px;
+        }
+
     }
 } 
 
-// .holder {
-//     display: flex;
-//     justify-content: center;
-//     flex-direction: column;
-//     margin: 1% 5% 1%;
-// }
-// h2 {
-//     color: white;
-//     font-size: 40px;
-//     font-family: 'Playfair Display', serif;
-// }
+@media(min-width: 600px) and (max-width:900px) {
 
-// .entry{
-//     background: rgba(59, 74, 107, .4);
-// }
-// .entry {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: start;
 
-// }
-// #entryHolder{
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-around;
-//     align-items: start;
-// }
+    body {
+        background-color: #415B97;
+        font-size: large;
+        font-family: $montserrat;
+    }
+    
+    .wrapper {
+        display: grid;
+        margin: 5% 10%; 
+        grid-template-rows: 100px 50px 50px 50px 200px 200px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "a" 
+        "b" 
+        "c" 
+        "d"
+        "e"
+        "f";
+        
+    }
+    
+    div {
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: row;
+        .headline {
+            background-color: #A1712E;
+            grid-area: a;
+            align-items: center;
+        }
+        .city{
+            background-color: rgb(206, 169, 60);
+            grid-area: b;
+            align-items: center;
+            label {
+                margin: 0 10px;
+            }
+        }
+        .date{
+            background-color: rgb(206, 169, 60);
+            grid-area: c;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .submit {
+            background-color: rgb(206, 169, 60);
+            grid-area: d;
+            align-items: center;
+        }
+        .result {
+            background-color: rgb(206, 169, 60);
+            border-top:  #415B97 solid 5px;
+            grid-area: e; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            #entryHolder {
+                display: flex;
+                flex-direction: column; 
+                div {
+                    margin: 10px 10%;
+                }
+            }
+        }
+        .img{
+            background-color: #A1712E;
+            grid-area: f;
+            justify-content: center;
+            img{
+                position: relative;
+                object-fit: fill;
+                height: 100%;
+                width: auto;
+                margin: 0px 10px;
+            }
+    
+        }
+    } 
+}
+@media(min-width:901px) {
 
-// #date{
 
-// }
+body {
+    background-color: #415B97;
+    font-size: large;
+    font-family: $montserrat;
+}
 
-// #temp{
+.wrapper {
+    display: grid;
+    margin: 5% 10%; 
+    grid-template-rows: 100px 50px 50px 50px 300px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "a  e" 
+    "b e" 
+    "c e" 
+    "d e"
+    "f f";
+    
+}
 
-// }
+div {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    .headline {
+        background-color: #A1712E;
+        grid-area: a;
+        align-items: center;
+    }
+    .city{
+        background-color: rgb(206, 169, 60);
+        grid-area: b;
+        align-items: center;
+        label {
+            margin: 0 10px;
+        }
+    }
+    .date{
+        background-color: rgb(206, 169, 60);
+        grid-area: c;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .submit {
+        background-color: rgb(206, 169, 60);
+        grid-area: d;
+        align-items: center;
+    }
+    .result {
+        background-color: rgb(206, 169, 60);
+        border-left:  #A1712E solid 10px;
+        grid-area: e; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        #entryHolder {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 10%; 
+        }
+    }
+    .img{
+        background-color: #A1712E;
+        grid-area: f;
+        justify-content: center;
+        img{
+            position: relative;
+            object-fit: fill;
+            height: 100%;
+            width: auto;
+            margin: 0px 10px;
+        }
 
-// #content{
-
-// }
-
-// .headline {
-
-// }
-// .title{
-
-// }
-
-// /*  Basic Styling To Override Default For Basic HTML Elements */
-// label{
-//     display:block;
-//     font-size: 27px;
-// }
-
-// input{
-//     display:block;
-//     height: 60px;
-//     width: 100%;
-//     background:#22b2da;
-//     color: #f0d43a;
-//     font-size: 20px;
-//     font-family: 'Oswald', sans-serif;
-//     border: none;
-// }
-
-// button{
-//     width: 100%;
-//     height: 100px;
-//     background: #3b4a6b;
-//     color: #f0d43a;
-//     font-size: 26px;
-//     font-family: 'Oswald', sans-serif;
-//     border: none;
-//     box-shadow: 2px 4px 5px #444;
-// }
-// h1{
-//     font-size: 36px;
-// }
-
-// textarea{
-//     background:#22b2da;
-//     color: #f0d43a;
-//     font-size: 20px;
-//     font-family: 'Oswald', sans-serif;
-// }
-// /* Reset style for HTML element on active to have no border*/
-// input:focus,
-// select:focus,
-// textarea:focus,
-// button:focus {
-//     outline: none;
-// }
-// /* Style for Placeholder Text*/
-// ::placeholder { /* Firefox, Chrome, Opera */ 
-//     color: #f0d43a; 
-//     font-family: 'Oswald', sans-serif;
-
-// } 
-  
-// :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-//     color: #f0d43a; 
-//     font-family: 'Oswald', sans-serif;
-
-// } 
-  
-// ::-ms-input-placeholder { /* Microsoft Edge */ 
-//     color: #f0d43a; 
-//     font-family: 'Oswald', sans-serif;
-
-// } 
+    }
+} 
+}

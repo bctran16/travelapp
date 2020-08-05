@@ -12,7 +12,7 @@ document.getElementById('generate').addEventListener('click', (event) => {
     postData('http://localhost:8081/addEntry', {city: city, start: start, end: end}).then(fetchData).then((res) => {
         console.log(res);
         let info = document.querySelector('#date p');
-        let img = document.querySelector('#img img');
+        let img = document.querySelector('.img img');
         let temperature = document.querySelector('#temp p');
         if (info===null) {
             info = document.createElement('p');
@@ -20,7 +20,7 @@ document.getElementById('generate').addEventListener('click', (event) => {
         }
         if ( img===null) {
             img = document.createElement('img');
-            document.querySelector('#img').appendChild(img);
+            document.querySelector('.img').appendChild(img);
         }
         if (temperature===null){
             temperature = document.createElement('p');

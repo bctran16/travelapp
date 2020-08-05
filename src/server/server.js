@@ -41,7 +41,7 @@ const server = app.listen(port, () => {console.log(`server running at port ${por
 // Get Request Server Side
 app.get('/getData', (req, res) => {
     console.log("---Get Request----")
-    res.send(projectData.pop());
+    res.status(200).send(projectData.pop());
     
 });
 
@@ -76,9 +76,9 @@ app.post('/addEntry', (req, res) => {
     }).then(() => {
         return fetchImage(encodeURI(req.body.city));
     }).then((res) => {
-        console.log(res.hits[0].previewURL);
+        console.log(res.hits[0].largeImageURL);
         let newEntry = projectData.pop();
-        newEntry.img = res.hits[0].previewURL; 
+        newEntry.img = res.hits[0].largeImageURL; 
         console.log(newEntry);
         projectData.push(newEntry);
     }).then(()=>{
@@ -118,3 +118,5 @@ const fetchImage = async(city) => {
         console.log("error", error);
     }
 }
+
+module.exports = { app, server };
