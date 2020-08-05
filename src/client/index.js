@@ -1,5 +1,6 @@
 import { postData }  from './js/app'
 import {fetchData} from './js/app'
+import './styles/style.scss'
 
 document.getElementById('generate').addEventListener('click', (event) => {
     const city = document.querySelector('#city').value;
