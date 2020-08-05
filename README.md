@@ -1,5 +1,9 @@
 # Travel App
 
+## Overview
+
+The app allows the user to type in the destination and the start date and the end date. It displays the length of the trip, how far away it is, and the typical weather for that time period. 
+
 ## Dependencies
 npm install --save-dev 
 babel-cli 
@@ -16,9 +20,13 @@ optimize-css-assets-webpack-plugin terser-webpack-plugin
 webpack 
 workbox-webpack-plugin --save-dev
 
+## Running the App
+To run in dev mode, use command 'npm run build-dev'
+To run in prod mode, use command 'npm run build-prod'
+
 ## Tools
 This travels apps utilizes NodeJS, Express for back-end and SCSS and HTML for front end. It also uses other tools such as Webpack and ServiceWorker. It implements Weatherbit API, Pixabay API, and Geoname API. 
 
-## Overview
 
-The app allows the user to type in the destination and the start date and the end date. It displays the length of the trip, how far away it is, and the typical weather for that time period. 
+
+
